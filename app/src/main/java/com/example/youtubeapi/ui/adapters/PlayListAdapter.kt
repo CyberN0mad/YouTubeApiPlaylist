@@ -38,7 +38,7 @@ class PlayListAdapter(var listener: PlayListClickListener) : RecyclerView.Adapte
     inner class PlaylistsViewHolder(itemView: View) : BaseViewHolder(itemView) {
         override fun onBind(position: Int) {
             itemView.playlist_title.text = items[position].snippet?.title
-            itemView.series_count.text = (adapterPosition.toString()+1 +" video series")
+            itemView.series_count.text = (adapterPosition.toString()+ 1 +" video series")
             itemView.iv_playlist.setImageFromUrl(items[position].snippet?.thumbnails?.medium?.url)
             itemView.setOnClickListener { listener.onPlayListClick(adapterPosition) }
         }

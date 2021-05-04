@@ -31,9 +31,7 @@ fun Context.isConnected() : Boolean{
     return false
 }
 
-fun Context.showToast(text:String){
-    Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
-}
+
 fun Context.showToastL(text:String){
     Toast.makeText(this, text, Toast.LENGTH_LONG).show()
 }

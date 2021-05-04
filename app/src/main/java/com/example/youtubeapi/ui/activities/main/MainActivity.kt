@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.youtubeapi.R
 import com.example.youtubeapi.extensions.isConnected
-import com.example.youtubeapi.extensions.showToast
 import com.example.youtubeapi.extensions.showToastL
 import com.example.youtubeapi.ui.activities.play_list_detail.PlayListDetail
 import com.example.youtubeapi.ui.activities.try_connect.DisconnectActivity

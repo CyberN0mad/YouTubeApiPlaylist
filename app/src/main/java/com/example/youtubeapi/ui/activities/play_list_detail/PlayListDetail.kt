@@ -2,26 +2,20 @@ package com.example.youtubeapi.ui.activities.play_list_detail
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.youtubeapi.R
 import com.example.youtubeapi.extensions.isConnected
-import com.example.youtubeapi.extensions.showToast
-import com.example.youtubeapi.extensions.showToastL
 import com.example.youtubeapi.ui.activities.try_connect.DisconnectActivity
 import com.example.youtubeapi.ui.adapters.VideoAdapter
 import com.example.youtubeapi.ui.listeners.PlayListClickListener
-import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_play_list_detail.*
 import kotlinx.android.synthetic.main.content_scrolling.*
-import java.util.Observer
+
 
 class PlayListDetail : AppCompatActivity(), PlayListClickListener {
 

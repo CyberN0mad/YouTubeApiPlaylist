@@ -14,7 +14,7 @@ abstract class BaseActivity(private val layout: Int) : AppCompatActivity() {
     }
     abstract fun showDisconnectState()
 
-    abstract fun setupUI() // View
+    abstract fun setupUI() // view
 
     abstract fun setupLiveData() // LData
 
