@@ -76,5 +76,4 @@ class PlayListDetail : AppCompatActivity(), PlayListClickListener {
         TODO("Not yet implemented")
     }
 
-
 }

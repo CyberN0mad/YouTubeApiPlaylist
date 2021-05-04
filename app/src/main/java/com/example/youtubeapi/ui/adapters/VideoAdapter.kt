@@ -43,8 +43,7 @@ class VideoAdapter (var listener: PlayListClickListener) : RecyclerView.Adapter<
         override fun onBind(position: Int) {
             itemView.video_title.text = items[position].snippet?.title
             itemView.iv_video.setImageFromUrl(items[position].snippet?.thumbnails?.medium?.url)
-            itemView.time_of_video.text = "04 : 14"
-            Log.d("med",items[position].snippet?.thumbnails?.medium.toString())
+            Log.d("proverka",items[position].snippet?.thumbnails?.medium.toString())
             itemView.setOnClickListener { listener.onPlayListClick(adapterPosition) }
         }
     }

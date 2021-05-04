@@ -22,7 +22,7 @@ class Repository {
                 response: Response<PlayList>
             ) {
                 val data = response.body()
-                Log.d("bodyyyyy", response.body().toString())
+                Log.d("details", response.body().toString())
                 val list = data!!.items
                 playlistsLiveData.value = list
             }
