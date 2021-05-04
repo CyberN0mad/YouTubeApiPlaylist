@@ -73,7 +73,6 @@ class PlayListDetail : AppCompatActivity(), PlayListClickListener {
     }
 
     override fun onPlayListClick(pos: Int) {
-        TODO("Not yet implemented")
     }
 
 }
