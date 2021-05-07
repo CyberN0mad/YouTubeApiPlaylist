@@ -10,8 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.youtubeapi.R
 import com.example.youtubeapi.extensions.isConnected
 import com.example.youtubeapi.ui.activities.try_connect.DisconnectActivity
-import com.example.youtubeapi.ui.adapters.VideoAdapter
-import com.example.youtubeapi.ui.listeners.PlayListClickListener
+import com.example.youtubeapi.data.remote.PlayListClickListener
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_play_list_detail.*
 import kotlinx.android.synthetic.main.content_scrolling.*
@@ -38,14 +37,15 @@ class PlayListDetail : AppCompatActivity(), PlayListClickListener {
             finish()
         }
         viewModel = ViewModelProvider(this)[PlayListViewModel::class.java]
-        modelActions(viewModel)
+        modelActions()
 
     }
 
-    private fun modelActions(model: PlayListViewModel) {
+    private fun modelActions() {
         initAdapter()
         val id = intent.getStringExtra("playlistId")
         playlist_title.text = intent.getStringExtra("title")
+//        playlist_description.text = intent.getStringExtra(playlist_description.toString()) // net na servere
         val count = intent.getSerializableExtra("video_count")
         videos_count.text =( count.toString() + "  video series")
         viewModel.setVideos(id ?: "")

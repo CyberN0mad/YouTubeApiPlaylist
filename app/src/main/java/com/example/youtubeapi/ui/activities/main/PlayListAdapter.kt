@@ -1,4 +1,4 @@
-package com.example.youtubeapi.ui.adapters
+package com.example.youtubeapi.ui.activities.main
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.youtubeapi.R
 import com.example.youtubeapi.data.model.PlayList
 import com.example.youtubeapi.extensions.setImageFromUrl
-import com.example.youtubeapi.ui.listeners.PlayListClickListener
+import com.example.core.network.ui.BaseViewHolder
+import com.example.youtubeapi.data.remote.PlayListClickListener
 import kotlinx.android.synthetic.main.playlist_item.view.*
 
 class PlayListAdapter(var listener: PlayListClickListener) : RecyclerView.Adapter<BaseViewHolder>() {

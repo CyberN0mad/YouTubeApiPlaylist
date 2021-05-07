@@ -1,4 +1,4 @@
-package com.example.youtubeapi.ui.listeners
+package com.example.youtubeapi.data.remote
 
 interface PlayListClickListener {
     fun onPlayListClick(pos:Int)

@@ -2,6 +2,7 @@ package com.example.youtubeapi.data.remote
 
 import com.example.youtubeapi.data.model.PlayList
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -11,7 +12,7 @@ interface YoutubeApi {
         @Query("part") part: String,
         @Query("channelId")channelId: String,
         @Query("key") apiKey:String
-    ): Call<PlayList>
+    ):Call <PlayList>
 
     @GET("playlistItems")
     fun getVideos(
@@ -19,6 +20,7 @@ interface YoutubeApi {
         @Query("pageToken") pageToken:String,
         @Query("playlistId") playlistId:String,
         @Query("key") key:String
-    ): Call<PlayList>
+
+    ):Call <PlayList>
 
 }

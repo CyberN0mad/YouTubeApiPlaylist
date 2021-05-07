@@ -1,4 +1,4 @@
-package com.example.youtubeapi.ui.adapters
+package com.example.core.network.ui
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

@@ -1,4 +1,4 @@
-package com.example.youtubeapi.ui.activities.main
+package com.example.core.network.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

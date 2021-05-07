@@ -10,7 +10,7 @@ import com.example.youtubeapi.data.remote.ApiClient
 import retrofit2.Call
 import retrofit2.Response
 
-class Repository {
+class  Repository {
     var playlistsLiveData : MutableLiveData<MutableList<PlayList.Info>> = MutableLiveData()
     var videosLiveData : MutableLiveData<MutableList<PlayList.Info>> = MutableLiveData()
 
@@ -22,8 +22,7 @@ class Repository {
                 response: Response<PlayList>
             ) {
                 val data = response.body()
-                Log.d("details", response.body().toString())
-                val list = data!!.items
+                val list = data?.items
                 playlistsLiveData.value = list
             }
 

@@ -6,13 +6,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.core.network.ui.BaseActivity
+import com.example.core.network.ui.MainViewModel
 import com.example.youtubeapi.R
 import com.example.youtubeapi.extensions.isConnected
 import com.example.youtubeapi.extensions.showToastL
 import com.example.youtubeapi.ui.activities.play_list_detail.PlayListDetail
 import com.example.youtubeapi.ui.activities.try_connect.DisconnectActivity
-import com.example.youtubeapi.ui.adapters.PlayListAdapter
-import com.example.youtubeapi.ui.listeners.PlayListClickListener
+import com.example.youtubeapi.data.remote.PlayListClickListener
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity(R.layout.activity_main), PlayListClickListener {
@@ -55,7 +56,6 @@ class MainActivity : BaseActivity(R.layout.activity_main), PlayListClickListener
         intent.putExtra("title", adapter.getItem(pos).snippet?.title)
         intent.putExtra("description", adapter.getItem(pos).snippet?.description)
         intent.putExtra("video_count", adapter.getItem(pos).contentDetails?.itemCount)
-        Log.d("id_pl",adapter.getItem(pos).id.toString())
         showToastL(adapter.getItem(pos).id.toString())//нет данных
         startActivity(intent)
 
